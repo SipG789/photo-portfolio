@@ -1,3 +1,8 @@
+
+This site can be found published on GH pages. Check it out in the link below:
+(https://sipg789.github.io/photo-portfolio/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

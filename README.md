@@ -1,6 +1,5 @@
 
-This site can be found published on GH pages. Check it out in the link:[Portfolio]
-(https://sipg789.github.io/photo-portfolio/).
+This site can be found published on GH pages. Check it out in the link:[Portfolio](https://sipg789.github.io/photo-portfolio/).
 
 
 # Getting Started with Create React App

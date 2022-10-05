@@ -8,7 +8,6 @@ function Gallery(props) {
         name: "commercial",
         description: "Photos of grocery stores, food trucks, and other commercial products",
     };
-
     return (
         <section>
             <h1>{capitalizeFirstLetter(currentCategory.name)} </h1>

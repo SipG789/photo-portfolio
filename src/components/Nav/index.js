@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { capitalizeFirstLetter } from '../../utils/helpers';
-
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
   const {
@@ -8,7 +7,7 @@ function Nav(props) {
     setCurrentCategory,
     currentCategory,
     contactSelected,
-    setContactSelected
+    setContactSelected,
   } = props;
 
   useEffect(() => {
@@ -28,26 +27,36 @@ function Nav(props) {
       </h2>
       <nav>
         <ul className="flex-row">
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>About me</a>
+          <li className={`mx-2 ${contactSelected && "navActive"}`}>
+            <a
+              data-testid="about"
+              href="#about"
+              onClick={() => setContactSelected(false)}
+            >
+              About me
+            </a>
           </li>
           <li>
-            <span onClick={() => setContactSelected(true)} >Contact</span>
+            <span onClick={() => setContactSelected(true)}>Contact</span>
           </li>
           {categories.map((category) => (
-            <li className={`mx-1 ${
-              // if condition is true navActice wil be returned
-              currentCategory.name === category.name && !contactSelected && 'navActive'
-            }`} 
-            key={category.name}>
-            <span 
-            onClick={() => {
-              setCurrentCategory(category);
-              setContactSelected(false);
-            }}
+            <li
+              className={`mx-1 ${
+                // if condition is true navActice wil be returned
+                currentCategory.name === category.name &&
+                !contactSelected &&
+                "navActive"
+              }`}
+              key={category.name}
             >
-              {capitalizeFirstLetter(category.name)}
-            </span>
+              <span
+                onClick={() => {
+                  setCurrentCategory(category);
+                  setContactSelected(false);
+                }}
+              >
+                {capitalizeFirstLetter(category.name)}
+              </span>
             </li>
           ))}
         </ul>
